@@ -18,7 +18,7 @@ double closeness_centrality(int src,vector<vector<pair<int,int>>> adj_list);
 > Used tools: Visual studio
 
 > Used libraries:
-1. STL library :
-  - Vector container
-  - priority_queue: to get shortest distance from source
-2. iostream
+  1. STL library :
+    - Vector container
+    - priority_queue: to get shortest distance from source
+  2. iostream
