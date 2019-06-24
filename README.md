@@ -3,14 +3,14 @@ Closeness centrality indicates how close a node is to all other nodes in the net
 the network.
 > For a node x and a graph of N connected nodes, The centrality C(x) is defined as:
 > C(x)= (N-1)/∑ d(y,x)
-### steps :
+### Steps :
 1. Fill adjancey list with nodes and edges .
 2. Implement Dijkstra's algorithm to get shortest distance from src "x" to all connected nodes .
 ```C++
 vector<int> Dijkstra(int src,vector<vector<pair<int,int>>> adj_list);
 ```
 3. Apply Closeness centrality algorithm by summing distances from src "x" to all connected nodes "y", then dividing 
-**(number of connected nodes -1 )/sum of distances **
+**(number of connected nodes -1 )/sum of distances**
 ```C++
 double closeness_centrality(int src,vector<vector<pair<int,int>>> adj_list);
 ```
