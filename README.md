@@ -9,8 +9,16 @@ the network.
 ```C++
 vector<int> Dijkstra(int src,vector<vector<pair<int,int>>> adj_list);
 ```
-3. Apply Closeness centrality algorithm by summing distances from src "x" to all connected nodes "y", then dividing 
+3. Apply Closeness centrality algorithm by summing distances from src "x" to all connected nodes "y", then dividing
 **(number of connected nodes -1 )/sum of distances**
 ```C++
 double closeness_centrality(int src,vector<vector<pair<int,int>>> adj_list);
 ```
+
+> Used tools: Visual studio
+
+> Used libraries:
+1. STL library :
+  - Vector container
+  - priority_queue: to get shortest distance from source
+2. iostream
