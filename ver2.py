@@ -14,6 +14,8 @@ Created on Sat May 18 14:22:58 2019
 import networkx as nx
 from subprocess import Popen, PIPE
 import matplotlib.pyplot as plt
+import numpy as np 
+
 ####
 from matplotlib.colors import ListedColormap, LinearSegmentedColormap
 viridis = plt.get_cmap(plt.cm.Blues, 256)
@@ -71,16 +73,25 @@ plt.show()
 plt.figure(num=None, figsize=(20, 20), dpi=60)    
 nx.draw(G,graph_pos,with_labels=True,node_color=node_color_list_Degree,cmap=newcmp,node_size =node_size_list_Degree,linewidths=10,font_color ='k',font_size =30 )
 nx.draw_networkx_edge_labels(G,graph_pos, edge_labels =graph)
+for n in range(num_nodes):
+    x,y=graph_pos[n]
+    plt.text(x,y+0.07,fontweight='bold',fontsize=16,s=node_color_list_Degree[n],horizontalalignment='center')
 plt.savefig("Degree",bbox_inches="tight")
 ##Drawing Closeness Algorithm Graph   
 plt.show()
 plt.figure(num=None, figsize=(20, 20), dpi=60)
 nx.draw(G,graph_pos,with_labels=True,node_color=node_color_list_Closeness,cmap=newcmp,node_size =node_size_list_Closeness,linewidths=10,font_color ='k',font_size =30)
 nx.draw_networkx_edge_labels(G,graph_pos, edge_labels =graph)
+for n in range(num_nodes):
+    x,y=graph_pos[n]
+    plt.text(x,y+0.07,fontweight='bold',fontsize=16,s=node_color_list_Closeness[n],horizontalalignment='center')
 plt.savefig("Closeness",bbox_inches="tight")
 ##Drawing Betweenness Algorithm Graph   
 plt.show()
 plt.figure(num=None, figsize=(20, 20), dpi=60)
 nx.draw(G,graph_pos,with_labels=True,node_color=node_color_list_Betweenness,cmap=newcmp,node_size =node_size_list_Betweenness,linewidths=10,font_color ='k',font_size =30)
 nx.draw_networkx_edge_labels(G,graph_pos, edge_labels =graph)
+for n in range(num_nodes):
+    x,y=graph_pos[n]
+    plt.text(x,y+0.07,fontweight='bold',fontsize=16,s=node_color_list_Betweenness[n],horizontalalignment='center')
 plt.savefig("Betweenness",bbox_inches="tight")
